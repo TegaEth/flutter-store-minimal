@@ -32,7 +32,7 @@ class IntroPage extends StatelessWidget {
           const SizedBox(height: 10),
 
           //subtitle
-          Text("Premium Quality Thoughts",
+          Text("Premium Quality Products",
             style: TextStyle(
               color: Theme.of(context).colorScheme.inversePrimary
             ),
