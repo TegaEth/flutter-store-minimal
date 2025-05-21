@@ -15,21 +15,43 @@ class ShopPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        foregroundColor: Theme.of(context).colorScheme.inversePrimary,
+        foregroundColor: Colors.black,
         title: const Text("Shop Page"),
       ),
 
       drawer: MyDrawer(),
-      backgroundColor: Theme.of(context).colorScheme.surface,
-      body: ListView.builder(
-        itemCount: products.length,
-        itemBuilder: (context, index) {
-        // get individual product from shop
-        final product = products[index];
+      backgroundColor: Colors.grey.shade500,
+      body: ListView(
+        children: [
+          const SizedBox(
+            height: 50,
+          ),
+          // shop subtitle
+          Center(
+            child: 
+              Text("Pick from a selected list of premium products",
+              style: TextStyle(color: Colors.black),
+              ),
 
-        //return as a product title UI
-        return MyProductTile(product: product);
-      }),
+          ),
+
+          // product list
+          SizedBox(
+          height: 550,
+          child: ListView.builder(
+            itemCount: products.length,
+            scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.all(15),
+            itemBuilder: (context, index) {
+            // get individual product from shop
+            final product = products[index];
+
+            //return as a product title UI
+            return MyProductTile(product: product);
+        }),
+      ),
+        ]
+      )
     );
   }
 }

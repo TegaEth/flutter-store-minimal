@@ -13,7 +13,7 @@ class CartPage extends StatelessWidget {
       title: const Text("Cart Page"), 
     ),
     drawer: const MyDrawer(),
-    backgroundColor: Theme.of(context).colorScheme.surface,
+    backgroundColor: Colors.grey[400],
     );
   }
 }
