@@ -1,8 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_chat_app/models/product.dart';
 
-class Shop {
+class Shop extends ChangeNotifier {
   // products for sale
-  final List<Product> shop = [
+  final List<Product> _shop = [
     Product(
       name: "Product 1",
       price: 99.99,
@@ -26,7 +27,7 @@ class Shop {
   ];
 
   // user car
-  List<Product> cart = [];
+  final List<Product> _cart = [];
 
   // get product list
   List<Product> get shop => _shop;
@@ -37,10 +38,12 @@ class Shop {
   // add item to cart
   void addToCart(Product item) {
     _cart.add(item);
+    notifyListeners();
   }
-  
+
   // remove item from cart
   void removeFromCart(Product item) {
     _cart.remove(item);
+    notifyListeners();
   }
 }
