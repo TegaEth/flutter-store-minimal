@@ -17,6 +17,10 @@ class ShopPage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.black,
         title: const Text("Shop Page"),
+        actions: [
+          // go to cart page
+          IconButton(onPressed: () => Navigator.pushNamed(context, '/cart_page'), icon: Icon(Icons.shopping_cart_outlined))
+        ],
       ),
 
       drawer: MyDrawer(),
