@@ -56,7 +56,24 @@ class MyProductTile extends StatelessWidget {
          ),
 
           //Product price + add to cart button
-          Text(product.price.toStringAsFixed(2)),
+          Row(
+            children: [
+              // product price
+              Text('\$' + product.price.toStringAsFixed(2)),
+
+              // add to cart button
+              Container(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.primary,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.add),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
