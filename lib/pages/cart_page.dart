@@ -77,7 +77,7 @@ class CartPage extends StatelessWidget {
         title: const Text("Cart Page"),
       ),
       drawer: const MyDrawer(),
-      backgroundColor: Colors.grey[400],
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           // cart list
@@ -105,7 +105,7 @@ class CartPage extends StatelessWidget {
           // pay button
           Padding(
             padding: const EdgeInsets.all(50),
-            child: MyButton(onTap: () => payButtonOnPressed(context), child: Text("PAY NOW"))
+            child: MyButton(onTap: () => payButtonOnPressed(context), child: Text("PAY NOW", style: TextStyle(color: Colors.white),))
           )
         ],
       ),

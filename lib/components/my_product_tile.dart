@@ -40,7 +40,7 @@ class MyProductTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.grey[400],
+        color: Colors.grey[200],
         borderRadius: BorderRadius.circular(10),
       ),
       margin: EdgeInsets.all(10),
@@ -63,7 +63,7 @@ class MyProductTile extends StatelessWidget {
                   ),
                   width: double.infinity,
                   padding: const EdgeInsets.all(25),
-                  child: const Icon(Icons.favorite),
+                  child: Image.asset(product.imagePath),
                 ),
               ),
               const SizedBox(height: 25),

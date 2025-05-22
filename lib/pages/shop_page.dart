@@ -24,7 +24,7 @@ class ShopPage extends StatelessWidget {
       ),
 
       drawer: MyDrawer(),
-      backgroundColor: Colors.grey.shade500,
+      backgroundColor: Colors.white,
       body: ListView(
         children: [
           const SizedBox(
